@@ -1,0 +1,18 @@
+cas:
+  server:
+    name: http://localhost:8080
+    prefix: ${cas.server.name}/cas
+  authn:
+    accept:
+      # 登录账号，默认为 casuser::Mellon
+      users: admin::admin
+  service-registry:
+    # 是否重新读取 json
+    init-from-json: true
+    json:
+      #　服务注册时读取的　json 文件位置
+      location: file:D:\\github\\cas-overlay-template\\etc\\cas\\services
+  tgc:
+    # Cookies 保存时，http 需要设置该值为false，否则无法保存Cookies成功
+    secure: false
+
